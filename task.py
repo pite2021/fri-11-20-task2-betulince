@@ -24,3 +24,28 @@
 #
 #Delete these comments before commit!
 #Good luck.
+class Banking:
+  def __init__(self):
+    self.balance = 0
+
+  def input(self):
+    amount = float(input("enter amount to be deposited"))
+    self.balance += amount
+    print("\namount deposited: ",amount)
+  
+  def withdraw(self):
+    amount = float(input("enter amount to be withdrawn: "))
+    if self.balance >= amount:
+      self.balance -= amount
+      
+    else:
+      print("inadequate balance!!")
+
+  def display(self):
+    print("net balance = ",self.balance)
+
+user = Banking()
+
+user.input()
+user.withdraw()
+user.display()
